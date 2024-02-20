@@ -25,8 +25,8 @@ export class PaiComponent {
     this.mensagemRecebidaDoFilho = mensagem;
   }
 
-  @Input() nome: string = '';
-  @Input() @Optional() idade: number = 25;
+  // @Input() nome: string = '';
+  // @Input() @Optional() idade: number = 25;
 
 }
 
