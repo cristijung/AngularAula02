@@ -1,0 +1,15 @@
+<section>
+  <h2>Eu sou o Componente Pai</h2>
+  <p>Mensagem que estou mandando para o meu filho: {{ mensagemParaFilho }}</p>
+  <hr />
+  <app-filho [mensagemDoPai]="mensagemParaFilho"></app-filho>
+  <hr />
+
+  <div>
+    <app-filhomenor
+      (mensagemEnviada)="receberMensagem($event)"
+    ></app-filhomenor>
+    <h3>Mensagem que vem do Segundo Filho</h3>
+    <p>Mensagem recebida do segundo filho: {{ mensagemRecebidaDoFilho }}</p>
+  </div>
+</section>
