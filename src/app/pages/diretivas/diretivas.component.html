@@ -1,0 +1,23 @@
+<section>
+  <h2>{{ title }}</h2>
+  <hr/>
+  <span>{{ stitle }}</span>
+  <div>
+    <ng-container *ngIf="isLoggedIn">
+      <p>Você está logado</p>
+    </ng-container>
+    <ng-container *ngIf="!isLoggedIn">
+      <p>Você não está logado</p>
+    </ng-container>
+  </div>
+  <hr/>
+
+  <div>
+    <span>{{ list }}</span>
+    <ul>
+      @for (ingredient of ingredientList; track ingredient.nome) {
+        <li>{{ ingredient.quantidade }}: {{ ingredient.nome }}</li>
+      }
+    </ul>
+  </div>
+</section>

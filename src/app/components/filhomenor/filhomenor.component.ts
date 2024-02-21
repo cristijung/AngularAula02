@@ -19,6 +19,4 @@ export class FilhomenorComponent {
       'Olá papis!! -- Esta é uma mensagem enviada do filho para o pai'
     );
   }
-
-
 }
