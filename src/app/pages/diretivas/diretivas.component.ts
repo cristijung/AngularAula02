@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-//import { Data } from '../../services/'
+//import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-diretivas',
@@ -16,9 +16,12 @@ export class DiretivasComponent {
   //diretiva condicional
   stitle = 'Meu Login';
   isLoggedIn = false;
+  isAtivo = true;
 
   constructor() {}
   ngOnInit() {}
+
+
 
   list = 'Lista de Ingredientes'
 
@@ -30,4 +33,17 @@ export class DiretivasComponent {
     { nome: 'Iogurte', quantidade: '2 bandejas de '},
   ];
 
+  produtos = [
+    { nome: 'Camisa', preco: 20, oferta: true },
+    { nome: 'Sapato', preco: 20, oferta: false },
+    { nome: 'Camisa', preco: 20, oferta: true },
+  ];
+
 }
+
+interface Produto {
+  nome: string;
+  preco: number;
+  oferta: boolean;
+}
+

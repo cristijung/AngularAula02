@@ -20,4 +20,16 @@
       }
     </ul>
   </div>
+
+  <div>
+    <!-- Aplica Classes de CSS  já criadas diretamente na tag -->
+    <div [ngClass]="{'ativo': isAtivo, 'inativo': !isAtivo}">
+      <ul>
+        @for (produto of produtos; track produto.nome) {
+          <li>{{ produto.nome }}: {{ produto.preco }} e está: {{ produto.oferta }}</li>
+        }
+      </ul>
+
+    </div>
+  </div>
 </section>

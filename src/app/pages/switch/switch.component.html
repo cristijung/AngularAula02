@@ -1,0 +1,9 @@
+<section>
+  <h1> O status atual é: </h1>
+<span [ngSwitch]="item.status">
+  <p *ngSwitchCase="'ATIVO'">Verde</p>
+  <p *ngSwitchCase="'INATIVO'">Laranja</p>
+  <p *ngSwitchCase="'PENDENTE'">Vermelho</p>
+  <p *ngSwitchDefault="">Status desconhecido</p>
+</span>
+</section>
